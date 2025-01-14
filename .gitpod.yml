@@ -1,0 +1,13 @@
+# .gitpod.yml
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      # Create and activate the conda environment
+      conda env create -f environment.yml
+      conda activate morig
+
+  - command: |
+      # Run any initial setup commands, such as downloading datasets
+      echo "Setup complete. You can now run your scripts."
